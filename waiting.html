@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check Your Email | EXPO IAU 2026</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+      }
+
+      .container {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 90%;
+        text-align: center;
+      }
+
+      .icon {
+        background: #fdf7fa;
+        color: #632949;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 20px auto;
+      }
+
+      .icon svg {
+        width: 40px;
+        height: 40px;
+        fill: #632949;
+      }
+
+      h2 {
+        color: #632949;
+        font-size: 26px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .spam-note {
+        font-size: 13px;
+        color: #888;
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #eee;
+        margin-bottom: 25px;
+      }
+
+      .btn {
+        display: inline-block;
+        background: #632949;
+        color: #ffffff;
+        padding: 12px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        transition: background 0.3s ease;
+      }
+
+      .btn:hover {
+        background: #4a1e35;
+      }
+
+      /* Language Toggle Button */
+      .lang-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: 2px solid #632949;
+        color: #632949;
+        padding: 8px 16px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .lang-toggle:hover {
+        background: #632949;
+        color: white;
+      }
+
+      /* Adjust for RTL when Arabic is active */
+      html[dir="rtl"] .lang-toggle {
+        right: auto;
+        left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Language Toggle Button -->
+    <button class="lang-toggle" onclick="toggleLang()" id="langBtn">
+      عربي
+    </button>
+
+    <div class="container">
+      <!-- Email Icon SVG -->
+      <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+          />
+        </svg>
+      </div>
+
+      <h2 id="title">Verify Your Email Address</h2>
+
+      <p id="desc1">
+        Almost there! We have sent an account activation link to your email
+        address.
+      </p>
+
+      <p id="desc2">
+        You must click the link to activate your account before you can log in.
+      </p>
+
+      <div class="spam-note" id="spamNote">
+        Didn't receive the email? Please check your <strong>Spam</strong> or
+        <strong>Junk</strong> folder.
+      </div>
+
+      <a href="login.html" class="btn" id="loginBtn">Return to Login</a>
+    </div>
+
+    <script>
+      let currentLang = "en";
+
+      function toggleLang() {
+        const html = document.documentElement;
+
+        if (currentLang === "en") {
+          // Switch to Arabic
+          currentLang = "ar";
+          html.lang = "ar";
+          html.dir = "rtl";
+
+          document.getElementById("langBtn").textContent = "English";
+          document.getElementById("title").textContent =
+            "تحقق من بريدك الإلكتروني";
+          document.getElementById("desc1").textContent =
+            "لقد اقتربت! قمنا بإرسال رابط تفعيل الحساب إلى عنوان بريدك الإلكتروني.";
+          document.getElementById("desc2").textContent =
+            "يجب عليك الضغط على الرابط لتفعيل حسابك قبل أن تتمكن من تسجيل الدخول.";
+          document.getElementById("spamNote").innerHTML =
+            "لم تستلم البريد الإلكتروني؟ يرجى التحقق من مجلد <strong>الرسائل غير المرغوب فيها (Spam)</strong>.";
+          document.getElementById("loginBtn").textContent =
+            "العودة إلى تسجيل الدخول";
+        } else {
+          // Switch to English
+          currentLang = "en";
+          html.lang = "en";
+          html.dir = "ltr";
+
+          document.getElementById("langBtn").textContent = "عربي";
+          document.getElementById("title").textContent =
+            "Verify Your Email Address";
+          document.getElementById("desc1").textContent =
+            "Almost there! We have sent an account activation link to your email address.";
+          document.getElementById("desc2").textContent =
+            "You must click the link to activate your account before you can log in.";
+          document.getElementById("spamNote").innerHTML =
+            "Didn't receive the email? Please check your <strong>Spam</strong> or <strong>Junk</strong> folder.";
+          document.getElementById("loginBtn").textContent = "Return to Login";
+        }
+      }
+    </script>
+  </body>
+</html>

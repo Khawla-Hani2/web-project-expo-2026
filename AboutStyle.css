@@ -1,0 +1,349 @@
+:where(.expo-about){
+  --expo-gold:#A37F2A;
+  --expo-navy:#41506F;
+  --expo-plum:#6F2B4F;
+  --expo-orange:#A54720;
+  --expo-olive:#57602D;
+  --expo-bg:#f5f5f5;
+  --expo-card:#ffffff;
+  --expo-text:#1d1d1f;
+  --expo-muted:#5f6368;
+  --expo-border:rgba(111,43,79,.16);
+  --expo-shadow:0 14px 35px rgba(0,0,0,.10);
+  --expo-radius-xl:24px;
+  --expo-radius-lg:18px;
+}
+
+.expo-about *{
+  box-sizing:border-box;
+}
+
+.expo-about .about-page{
+  min-height:100%;
+  padding:28px;
+  color:var(--expo-text);
+  position:relative;
+  background:#f5f5f5;
+}
+
+.expo-about .about-page::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:#f5f5f5;
+}
+
+.expo-about .about-page > *{
+  position:relative;
+  z-index:1;
+}
+
+.expo-about .about-hero{
+  text-align:center;
+  margin:60px auto 40px;
+  max-width:850px;
+}
+
+.expo-about .about-hero h1{
+  font-size:clamp(32px,4vw,56px);
+  margin:0;
+  font-weight:900;
+  color:#111;
+}
+
+.expo-about .expo-container{
+  max-width:1120px;
+  margin:0 auto;
+}
+
+.expo-about .grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:20px;
+}
+
+.expo-about .span-7{
+  grid-column:span 7;
+}
+
+.expo-about .span-5{
+  grid-column:span 5;
+}
+
+.expo-about .span-12{
+  grid-column:span 12;
+}
+
+.expo-about .expo-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--expo-radius-xl);
+  background:rgba(255,255,255,.88);
+  border:1px solid var(--expo-border);
+  box-shadow:var(--expo-shadow);
+  backdrop-filter:blur(10px);
+}
+
+.expo-about .expo-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  inset-inline-start:0;
+  width:7px;
+  height:100%;
+  background:linear-gradient(180deg,var(--expo-plum),var(--expo-gold));
+}
+
+.expo-about .card-header{
+  padding:22px 24px 8px;
+}
+
+.expo-about .card-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:0;
+  font-size:20px;
+  font-weight:900;
+  color:#111;
+}
+
+.expo-about .icon,
+.expo-about .track-icon{
+  width:42px;
+  height:42px;
+  border-radius:14px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  background:var(--expo-plum);
+  color:#fff;
+  font-weight:900;
+  box-shadow:0 10px 22px rgba(111,43,79,.22);
+}
+
+.expo-about .card-body{
+  padding:0 24px 24px;
+  color:var(--expo-muted);
+  line-height:1.9;
+  font-size:15px;
+}
+
+.expo-about .card-body ul{
+  margin:12px 0 0;
+  padding-inline-start:22px;
+}
+
+.expo-about .card-body li{
+  margin-bottom:8px;
+}
+
+.expo-about .expo2025-card {
+  margin-top: 24px;
+}
+
+.expo-about .expo2025-card .card-body {
+  padding: 0 28px 28px;
+}
+
+.expo-about .info-block {
+  margin-top: 22px;
+}
+
+.expo-about .info-block h3 {
+  margin: 0 0 12px;
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--expo-plum);
+}
+
+.expo-about .info-block ul {
+  margin: 0;
+  padding-inline-start: 22px;
+  display: grid;
+  gap: 8px;
+}
+
+.expo-about .info-block li {
+  color: var(--expo-muted);
+  line-height: 1.7;
+}
+
+.expo-about .tracks-list {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.expo-about .tracks-list li {
+  background: rgba(111, 43, 79, 0.07);
+  border: 1px solid rgba(111, 43, 79, 0.12);
+  padding: 10px 14px;
+  border-radius: 12px;
+  list-style-position: inside;
+}
+
+.expo-about .section-title{
+  margin:42px 0 18px;
+  font-size:clamp(22px,2.4vw,30px);
+  font-weight:900;
+  color:#111;
+  text-align:center;
+}
+
+.expo-about .track-section{
+  margin-top:34px;
+}
+
+.expo-about .track-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+}
+
+.expo-about .track-header h3{
+  margin:0;
+  font-size:22px;
+  font-weight:900;
+  color:#111;
+}
+
+.expo-about .cards-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+}
+
+.expo-about .project-card{
+  position:relative;
+  min-height:245px;
+  padding:22px;
+  border-radius:var(--expo-radius-lg);
+  background:linear-gradient(180deg,#fff,rgba(255,255,255,.92));
+  border:1px solid var(--expo-border);
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.expo-about .project-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 38px rgba(0,0,0,.14);
+  border-color:rgba(111,43,79,.30);
+}
+
+.expo-about .project-rank{
+  width:34px;
+  height:34px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:14px;
+  background:rgba(163,127,42,.16);
+  color:var(--expo-gold);
+  font-weight:900;
+}
+
+.expo-about .project-card h4{
+  margin:0 0 16px;
+  font-size:17px;
+  line-height:1.5;
+  font-weight:900;
+  color:#111;
+}
+
+.expo-about .project-meta{
+  display:grid;
+  gap:12px;
+}
+
+.expo-about .project-meta p{
+  margin:0;
+  display:grid;
+  gap:5px;
+}
+
+.expo-about .project-meta strong{
+  color:var(--expo-plum);
+  font-size:13px;
+  font-weight:900;
+}
+
+.expo-about .project-meta span{
+  color:var(--expo-muted);
+  font-size:13.5px;
+  line-height:1.65;
+}
+
+.expo-about .healthTrack .track-icon{
+  background:var(--expo-plum);
+}
+
+.expo-about .sustainabilityTrack .track-icon{
+  background:var(--expo-navy);
+}
+
+.expo-about .educationTrack .track-icon{
+  background:var(--expo-orange);
+}
+
+.expo-about .energyTrack .track-icon{
+  background:var(--expo-gold);
+}
+
+.expo-about .economyTrack .track-icon{
+  background:var(--expo-olive);
+}
+
+html[dir="rtl"] .expo-about{
+  text-align:right;
+}
+
+@media (max-width:720px){
+  .expo-about .about-page{
+    padding:18px;
+  }
+
+  .expo-about .grid{
+    grid-template-columns:1fr;
+  }
+
+  .expo-about .span-7,
+  .expo-about .span-5,
+  .expo-about .span-12{
+    grid-column:span 1;
+  }
+
+  .expo-about .card-header{
+    padding:18px 18px 8px;
+  }
+
+  .expo-about .card-body{
+    padding:0 18px 20px;
+  }
+
+  .expo-about .cards-grid{
+    grid-template-columns:1fr;
+  }
+
+  .expo-about .project-card{
+    min-height:auto;
+  }
+}
+
+.no-projects {
+  grid-column: 1 / -1;
+  color: var(--expo-muted);
+  background: rgba(255,255,255,.72);
+  border: 1px dashed var(--expo-border);
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+}
+
+html[dir="rtl"] .expo-about .card-title,
+html[dir="rtl"] .expo-about .track-header {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}

@@ -1,0 +1,81 @@
+/* --- invite_judge.css --- */
+
+/* Form Container Styling */
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.admin-form-box {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  border-top: 5px solid #6c1c43;
+  text-align: center;
+}
+
+.admin-form-box h2 {
+  color: #6c1c43;
+  margin-bottom: 20px;
+}
+
+.admin-form-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.admin-form-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6c1c43;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.admin-form-box button:hover {
+  background-color: #4a132e;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #6c1c43;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Flash Message Alerts */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}

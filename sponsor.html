@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXPO IAU 2026 | Sponsors</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sponsor.css">
+</head>
+
+<body class="sponsor-page" onclick="outsideClick(event)">
+
+  <!-- ===== HEADER ===== -->
+  <div class="top-strip">
+    <div class="logoL"><img src="IAU_logo_white.png" alt="IAU Logo"></div>
+
+    <div class="seg s1"><img src="user_vector.png" alt=""><span id="t1">Sign-up</span></div>
+    <div class="seg s2"><img src="Human_Health.png" alt=""><span id="t2">Health</span></div>
+    <div class="seg s3"><img src="Future_Economies.png" alt=""><span id="t3">Economies</span></div>
+    <div class="seg s4"><img src="Environmental_Sustainability.png" alt=""><span id="t4">Sustainability</span></div>
+    <div class="seg s5"><img src="Energy_and_Industry.png" alt=""><span id="t5">Energy</span></div>
+    <div class="seg s6"><img src="Education_and_Development.png" alt=""><span id="t6">Education</span></div>
+    <div class="seg s7"><img src="Research_Publications.png" alt=""><span id="t7">Research</span></div>
+
+    <div class="logoR"><img src="expo2026_en_white.png" id="expoLogo" alt="Expo Logo"></div>
+  </div>
+
+  <!-- ===== SUB BAR ===== -->
+  <div class="subbar">
+    <div class="menu-btn" onclick="toggleMenu(event)">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="lang-btn" onclick="toggleLang()">
+      <img src="lang.png" alt="Language">
+    </div>
+  </div>
+
+  <!-- ===== SIDE MENU ===== -->
+  <div class="side-menu" id="menu">
+    <div class="close-x" onclick="toggleMenu(event)">×</div>
+
+    <a href="index.php" id="m1">Home</a>
+    <a href="About.html" id="m2">About</a>
+    <a href="UPCOMINGEVENTDETAILS.html" id="m3">Upcoming Event Details</a>
+    <a href="achievements.html" id="m4">Achievements</a>
+    <a href="EventSchedule.html" id="m5">Event Schedule</a>
+    <a href="sponsor.html" id="m6">Sponsors</a>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="sponsor-main">
+
+    <section class="sponsor-header">
+      <h1 id="pageTitle">EXPO IAU 2026 – Sponsors Page</h1>
+      <p id="pageSubtitle">Meet the organizations supporting EXPO IAU 2026.</p>
+    </section>
+
+    <section class="sponsors-section" id="sponsorsContainer">
+      <!-- Sponsor cards will be added by JavaScript -->
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer-img">
+    <img src="footer.png" alt="Footer">
+    <div class="footer-text" id="footerText">
+      Vice Deanship of Scientific Research and Innovation
+    </div>
+  </div>
+
+  <script src="sponsor.js"></script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Expo 2026 | Achievements</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="achievements.css">
+<style>
+
+/* ===== Page Title ===== */
+
+.page-title{
+text-align:center;
+font-size:46px;
+color:#632949;
+margin:40px 0 30px;
+}
+
+
+
+/* ===== Main Content ===== */
+
+.main-content{
+padding-bottom:50px;
+}
+
+
+
+/* ===== Cards Layout ===== */
+
+.cards{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+padding:20px 35px 60px;
+}
+
+
+
+/* ===== Card Style ===== */
+
+.card{
+background:#fff;
+width:340px;
+border-radius:20px;
+padding:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+transition:.3s ease;
+}
+
+
+
+/* ===== Hover Effect ===== */
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+
+
+/* ===== Achievement Images ===== */
+
+.achievement-img{
+width:100%;
+height:210px;
+object-fit:cover;
+border-radius:16px;
+margin-bottom:18px;
+display:block;
+}
+
+
+
+/* ===== Card Title ===== */
+
+.card h3{
+font-size:24px;
+color:#632949;
+margin-bottom:12px;
+font-weight:700;
+line-height:1.5;
+}
+
+
+
+/* ===== Card Text ===== */
+
+.card p{
+font-size:16px;
+line-height:1.9;
+color:#333;
+}
+
+
+
+/* ===== English Mode ===== */
+
+[dir="ltr"] .card{
+text-align:left;
+}
+
+
+
+/* ===== Mobile Responsive ===== */
+
+@media(max-width:768px){
+
+.page-title{
+font-size:34px;
+margin-top:40px;
+}
+
+.cards{
+padding:15px;
+gap:20px;
+}
+
+.card{
+width:100%;
+}
+
+.card h3{
+font-size:21px;
+}
+
+.card p{
+font-size:15px;
+}
+
+.achievement-img{
+height:190px;
+}
+
+}
+
+</style>
+
+</head>
+
+
+
+<body onclick="outsideClick(event)">
+
+
+
+<!-- ===== Top Strip ===== -->
+
+<div class="top-strip">
+
+<div class="logoL">
+<img src="IAU_logo_white.png">
+</div>
+
+
+<div class="seg s1">
+<img src="user_vector.png">
+<span id="t1">تسجيل</span>
+</div>
+
+<div class="seg s2">
+<img src="Human_Health.png">
+<span id="t2">الصحة</span>
+</div>
+
+<div class="seg s3">
+<img src="Future_Economies.png">
+<span id="t3">الاقتصاد</span>
+</div>
+
+<div class="seg s4">
+<img src="Environmental_Sustainability.png">
+<span id="t4">الاستدامة</span>
+</div>
+
+<div class="seg s5">
+<img src="Energy_and_Industry.png">
+<span id="t5">الطاقة</span>
+</div>
+
+<div class="seg s6">
+<img src="Education_and_Development.png">
+<span id="t6">التعليم</span>
+</div>
+
+<div class="seg s7">
+<img src="Research_Publications.png">
+<span id="t7">الأبحاث</span>
+</div>
+
+
+<div class="logoR">
+<img src="expo2026_ar_white.png" id="expoLogo">
+</div>
+
+</div>
+
+
+
+<!-- ===== Sub Bar ===== -->
+
+<div class="subbar">
+
+<div class="menu-btn" onclick="toggleMenu(event)">
+<div></div>
+<div></div>
+<div></div>
+</div>
+
+
+<div class="lang-btn" onclick="toggleLang()">
+<img src="lang.png">
+</div>
+
+</div>
+
+
+
+  <div class="side-menu" id="menu">
+    <div class="close-x" onclick="toggleMenu(event)">×</div>
+
+    <a href="index.php" id="m1">Home</a>
+    <a href="About.html" id="m2">About</a>
+    <a href="UPCOMINGEVENTDETAILS.html" id="m3">Upcoming Event Details</a>
+    <a href="achievements.html" id="m4">Achievements</a>
+    <a href="EventSchedule.php" id="m5">Event Schedule</a>
+    <a href="sponsor.html" id="m6">Sponsors</a>
+  </div>
+
+<!-- ===== Page Content ===== -->
+
+<div class="main-content">
+
+<h1 class="page-title" id="title">
+
+إنجازات كلية العلوم والدراسات الإنسانية
+
+</h1>
+
+
+
+<div class="cards">
+
+
+
+<!-- ===== Card 1 ===== -->
+
+<div class="card">
+
+<img src="Card1.jpeg" class="achievement-img">
+
+<h3 id="a1">
+
+فريق بارق – Inspire Award
+
+</h3>
+
+<p id="a1d">
+
+حقق فريق بارق جائزة Inspire Award في بطولة VEX U 2026
+من بين 25 فريقًا مشاركًا يمثلون 20 جامعة سعودية.
+
+ويُعد هذا الإنجاز محطة مفصلية في مسيرة الكلية،
+إذ يُسجل الفريق كأول فريق يمثل الجامعة
+في هذه البطولة النوعية ويتوج بجائزة.
+
+</p>
+
+</div>
+
+
+
+<!-- ===== Card 2 ===== -->
+
+<div class="card">
+
+<img src="Card2.jpeg" class="achievement-img">
+
+<h3 id="a2">
+
+التميز في الروبوتات والابتكار
+
+</h3>
+
+<p id="a2d">
+
+تميّز طالبات الكلية في مجالات الابتكار والتقنية والروبوتات
+على المستوى الوطني، حيث ضم فريق بارق طالبات
+من قسمي علوم الحاسب والفيزياء.
+
+</p>
+
+</div>
+
+
+
+<!-- ===== Card 3 ===== -->
+
+<div class="card">
+
+<h3 id="a3">
+
+الأبحاث العلمية Q1
+
+</h3>
+
+<p id="a3d">
+
+نجح عدد من طلبة كلية العلوم والدراسات الإنسانية
+في نشر أبحاث علمية مصنفة ضمن مجلات Q1 العالمية
+في تخصصي الفيزياء وعلوم الحاسب،
+مما يعكس جودة المخرجات الأكاديمية والبحثية للكلية.
+
+كما ساهمت هذه الأبحاث في تعزيز ثقافة الابتكار والبحث العلمي،
+وإبراز قدرات الطلبة في تقديم حلول وأفكار علمية متميزة
+تواكب التطورات الحديثة وتدعم التميز الأكاديمي والبحثي.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+let lang="ar"
+
+const menu=document.getElementById("menu")
+
+
+
+/* ===== Menu ===== */
+
+function toggleMenu(e){
+
+e.stopPropagation()
+
+menu.classList.toggle("open")
+
+}
+
+
+function outsideClick(e){
+
+if(!menu.contains(e.target) && !e.target.closest(".menu-btn")){
+
+menu.classList.remove("open")
+
+}
+
+}
+
+
+
+/* ===== Language ===== */
+
+function toggleLang(){
+
+lang = lang==="ar" ? "en" : "ar"
+
+document.documentElement.dir =
+lang==="ar" ? "rtl" : "ltr"
+
+
+
+/* ===== Logo ===== */
+
+document.getElementById("expoLogo").src =
+
+lang==="ar"
+? "expo2026_ar_white.png"
+: "expo2026_en_white.png"
+
+
+
+/* ===== Top Strip Text ===== */
+
+document.getElementById("t1").textContent =
+lang==="ar" ? "تسجيل" : "Sign-up"
+
+document.getElementById("t2").textContent =
+lang==="ar" ? "الصحة" : "Health"
+
+document.getElementById("t3").textContent =
+lang==="ar" ? "الاقتصاد" : "Economies"
+
+document.getElementById("t4").textContent =
+lang==="ar" ? "الاستدامة" : "Sustainability"
+
+document.getElementById("t5").textContent =
+lang==="ar" ? "الطاقة" : "Energy"
+
+document.getElementById("t6").textContent =
+lang==="ar" ? "التعليم" : "Education"
+
+document.getElementById("t7").textContent =
+lang==="ar" ? "الأبحاث" : "Research"
+
+
+
+/* ===== Page Title ===== */
+
+document.getElementById("title").textContent =
+
+lang==="ar"
+? "إنجازات كلية العلوم والدراسات الإنسانية"
+: "College of Science and Humanities Achievements"
+
+
+
+/* ===== Card 1 ===== */
+
+document.getElementById("a1").textContent =
+
+lang==="ar"
+? "فريق بارق – Inspire Award"
+: "Bariq Team – Inspire Award"
+
+
+
+document.getElementById("a1d").textContent =
+
+lang==="ar"
+? "حقق فريق بارق جائزة Inspire Award في بطولة VEX U 2026 من بين 25 فريقًا مشاركًا يمثلون 20 جامعة سعودية. ويُعد هذا الإنجاز محطة مفصلية في مسيرة الكلية، إذ يُسجل الفريق كأول فريق يمثل الجامعة في هذه البطولة النوعية ويتوج بجائزة."
+: "Bariq Team won the Inspire Award in the VEX U 2026 competition among 25 participating teams representing 20 Saudi universities. This achievement marks a major milestone for the college as the first university team to win an award in this competition."
+
+
+
+/* ===== Card 2 ===== */
+
+document.getElementById("a2").textContent =
+
+lang==="ar"
+? "التميز في الروبوتات والابتكار"
+: "Excellence in Robotics and Innovation"
+
+
+
+document.getElementById("a2d").textContent =
+
+lang==="ar"
+? "تميّز طالبات الكلية في مجالات الابتكار والتقنية والروبوتات على المستوى الوطني، حيث ضم فريق بارق طالبات من قسمي علوم الحاسب والفيزياء."
+: "The students demonstrated excellence in innovation, technology, and robotics at the national level. Bariq Team included students from Computer Science and Physics departments."
+
+
+
+/* ===== Card 3 ===== */
+
+document.getElementById("a3").textContent =
+
+lang==="ar"
+? "الأبحاث العلمية Q1"
+: "Q1 Scientific Publications"
+
+
+
+document.getElementById("a3d").textContent =
+
+lang==="ar"
+? "نجح عدد من طلبة كلية العلوم والدراسات الإنسانية في نشر أبحاث علمية مصنفة ضمن مجلات Q1 العالمية في تخصصي الفيزياء وعلوم الحاسب، مما يعكس جودة المخرجات الأكاديمية والبحثية للكلية. كما ساهمت هذه الأبحاث في تعزيز ثقافة الابتكار والبحث العلمي، وإبراز قدرات الطلبة في تقديم حلول وأفكار علمية متميزة تواكب التطورات الحديثة وتدعم التميز الأكاديمي والبحثي."
+: "Several students from the College of Science and Humanities successfully published scientific papers in Q1-ranked international journals in Physics and Computer Science. These achievements reflect the quality of the college’s academic and research outcomes while promoting innovation and scientific excellence."
+
+
+
+}
+      function outsideClick(event) {
+  const menu = document.getElementById("menu");
+  const menuBtn = document.querySelector(".menu-btn");
+
+  if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+    menu.classList.remove("open");
+  }
+}
+</script>
+
+</body>
+</html>

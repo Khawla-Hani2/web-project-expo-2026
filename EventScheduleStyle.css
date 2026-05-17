@@ -1,0 +1,355 @@
+:where(.expo-schedule){
+  --expo-gold:#A37F2A;
+  --expo-navy:#41506F;
+  --expo-plum:#6F2B4F;
+  --expo-orange:#A54720;
+  --expo-olive:#57602D;
+  --expo-bg:#f5f5f5;
+  --expo-card:#ffffff;
+  --expo-text:#1d1d1f;
+  --expo-muted:#5f6368;
+  --expo-border:rgba(111,43,79,.16);
+  --expo-shadow:0 14px 35px rgba(0,0,0,.10);
+  --expo-radius-xl:24px;
+  --expo-radius-lg:18px;
+}
+
+.expo-schedule *{
+  box-sizing:border-box;
+}
+
+.expo-schedule{
+  width:100%;
+}
+
+.expo-schedule .schedule-page{
+  min-height:100%;
+  padding:28px;
+  color:var(--expo-text);
+  position:relative;
+  background:#F5F5F5;
+}
+
+.expo-schedule .schedule-page::before{
+  content:none;
+  display:none;
+}
+
+.expo-schedule .schedule-page > *{
+  position:relative;
+  z-index:1;
+}
+
+/* ===== Hero ===== */
+
+.expo-schedule .schedule-hero{
+  text-align:center;
+  margin:10px auto 40px;
+  max-width:850px;
+}
+
+.expo-schedule .schedule-hero h1,
+.expo-schedule .page-title{
+  font-size:clamp(32px,4vw,56px);
+  margin:0;
+  font-weight:900;
+  color:#111;
+}
+
+.expo-schedule .schedule-kicker{
+  font-size:15px;
+  font-weight:900;
+  color:var(--expo-plum);
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.expo-schedule .schedule-hero-text{
+  max-width:760px;
+  margin:14px auto 0;
+  font-size:15px;
+  line-height:1.9;
+  color:var(--expo-muted);
+}
+
+/* ===== Main ===== */
+
+.expo-schedule .schedule-container{
+  max-width:1120px;
+  margin:0 auto;
+}
+
+/* ===== Timeline ===== */
+
+.expo-schedule .alt-timeline{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  gap:26px;
+  max-width:960px;
+  margin:0 auto;
+}
+
+.expo-schedule .alt-timeline::before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:4px;
+  border-radius:999px;
+  background:linear-gradient(180deg,var(--expo-plum),var(--expo-gold));
+  opacity:.95;
+}
+
+/* ===== Timeline Items ===== */
+
+.expo-schedule .alt-item{
+  position:relative;
+  width:100%;
+  min-height:150px;
+}
+
+.expo-schedule .alt-item .side{
+  width:calc(50% - 48px);
+}
+
+.expo-schedule .alt-item.left .side{
+  margin-right:auto;
+}
+
+.expo-schedule .alt-item.right .side{
+  margin-left:auto;
+}
+
+.expo-schedule .alt-marker{
+  position:absolute;
+  top:34px;
+  left:50%;
+  transform:translateX(-50%);
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:var(--expo-gold);
+  border:4px solid var(--expo-plum);
+  box-shadow:0 0 0 7px rgba(111,43,79,.10);
+  z-index:2;
+}
+
+.expo-schedule .alt-connector{
+  position:absolute;
+  top:42px;
+  width:38px;
+  height:2px;
+  background:rgba(111,43,79,.24);
+}
+
+.expo-schedule .alt-item.left .alt-connector{
+  left:calc(50% - 38px);
+}
+
+.expo-schedule .alt-item.right .alt-connector{
+  left:50%;
+}
+
+/* ===== Cards ===== */
+
+.expo-schedule .expo-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--expo-radius-xl);
+  background:#ffffff;
+  border:1px solid var(--expo-border);
+  box-shadow:var(--expo-shadow);
+  backdrop-filter:blur(10px);
+  color:var(--expo-text);
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.expo-schedule .expo-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  inset-inline-start:0;
+  width:7px;
+  height:100%;
+  background:linear-gradient(180deg,var(--expo-plum),var(--expo-gold));
+}
+
+.expo-schedule .expo-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 38px rgba(0,0,0,.14);
+  border-color:rgba(111,43,79,.30);
+}
+
+.expo-schedule .expo-card-body{
+  padding:22px 24px 24px;
+}
+
+.expo-schedule .meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:14px;
+  flex-wrap:wrap;
+}
+
+.expo-schedule .date{
+  font-size:13.5px;
+  font-weight:900;
+  color:var(--expo-muted);
+}
+
+.expo-schedule .title{
+  font-size:clamp(18px,2vw,24px);
+  font-weight:900;
+  line-height:1.4;
+  color:#111;
+  margin:0 0 10px;
+}
+
+.expo-schedule .desc{
+  font-size:15px;
+  line-height:1.9;
+  color:var(--expo-muted);
+  margin:0;
+}
+
+/* ===== Badges ===== */
+
+.expo-schedule .badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:32px;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:900;
+  color:#fff;
+  white-space:nowrap;
+  box-shadow:0 10px 22px rgba(111,43,79,.16);
+}
+
+.expo-schedule .badge.gold{ background:linear-gradient(180deg,var(--expo-gold),#8A6A22); }
+.expo-schedule .badge.olive{ background:linear-gradient(180deg,var(--expo-olive),#444C21); }
+.expo-schedule .badge.navy{ background:linear-gradient(180deg,var(--expo-navy),#2F3D58); }
+.expo-schedule .badge.plum{ background:linear-gradient(180deg,var(--expo-plum),#58213E); }
+
+/* ===== RTL ===== */
+
+html[dir="rtl"] .expo-schedule{
+  text-align:right;
+}
+
+html[dir="rtl"] .expo-schedule .meta{
+  flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .expo-schedule .expo-card{
+  text-align:right;
+}
+
+html[dir="rtl"] .expo-schedule .alt-timeline::before,
+html[dir="rtl"] .expo-schedule .alt-marker{
+  left:50%;
+  transform:translateX(-50%);
+}
+
+html[dir="rtl"] .expo-schedule .alt-item.left .side{
+  margin-right:auto;
+  margin-left:0;
+}
+
+html[dir="rtl"] .expo-schedule .alt-item.right .side{
+  margin-left:auto;
+  margin-right:0;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width:900px){
+  .expo-schedule .schedule-page{
+    padding:18px;
+  }
+
+  .expo-schedule .schedule-hero{
+    margin:42px auto 28px;
+  }
+
+  .expo-schedule .schedule-hero-text{
+    font-size:15px;
+  }
+
+  .expo-schedule .alt-timeline{
+    gap:18px;
+    max-width:100%;
+  }
+
+  .expo-schedule .alt-timeline::before{
+    left:18px;
+    transform:none;
+  }
+
+  .expo-schedule .alt-item{
+    min-height:auto;
+    padding-left:42px;
+  }
+
+  .expo-schedule .alt-item .side{
+    width:100%;
+    margin:0 !important;
+  }
+
+  .expo-schedule .alt-marker{
+    left:18px;
+    transform:translateX(-50%);
+    top:28px;
+  }
+
+  .expo-schedule .alt-connector{
+    left:18px !important;
+    width:22px;
+  }
+
+  .expo-schedule .expo-card{
+    border-radius:20px;
+  }
+
+  .expo-schedule .expo-card-body{
+    padding:18px 18px 20px;
+  }
+
+  .expo-schedule .title{
+    font-size:20px;
+  }
+
+  .expo-schedule .meta{
+    align-items:flex-start;
+  }
+
+  html[dir="rtl"] .expo-schedule .alt-timeline::before{
+    left:auto;
+    right:18px;
+    transform:none;
+  }
+
+  html[dir="rtl"] .expo-schedule .alt-item{
+    padding-left:0;
+    padding-right:42px;
+  }
+
+  html[dir="rtl"] .expo-schedule .alt-marker{
+    left:auto;
+    right:18px;
+    transform:translateX(50%);
+  }
+
+  html[dir="rtl"] .expo-schedule .alt-connector{
+    left:auto !important;
+    right:18px;
+  }
+}

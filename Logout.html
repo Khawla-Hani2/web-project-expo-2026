@@ -1,0 +1,73 @@
+<!--Khawla Almoalem-->
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>EXPO IAU | Log Out</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="logout.css" />
+  </head>
+  <body>
+    <!--HEADER-->
+    <div class="top-strip">
+      <div class="logoL"><img src="IAU_logo_white.png" alt="IAU Logo" /></div>
+
+      <div class="seg s1">
+        <img src="user_vector.png" /><span>Sign-up</span>
+      </div>
+      <div class="seg s2">
+        <img src="Human_Health.png" /><span>Health</span>
+      </div>
+      <div class="seg s3">
+        <img src="Future_Economies.png" /><span>Economies</span>
+      </div>
+      <div class="seg s4">
+        <img src="Environmental_Sustainability.png" /><span
+          >Sustainability</span
+        >
+      </div>
+      <div class="seg s5">
+        <img src="Energy_and_Industry.png" /><span>Energy</span>
+      </div>
+      <div class="seg s6">
+        <img src="Education_and_Development.png" /><span>Education</span>
+      </div>
+      <div class="seg s7">
+        <img src="Research_Publications.png" /><span>Research</span>
+      </div>
+
+      <div class="logoR">
+        <img src="expo2026_en_white.png" alt="Expo Logo" />
+      </div>
+    </div>
+
+    <!-- Logout Card -->
+    <main class="logout-wrapper">
+      <div class="logout-card">
+        <h1>You have logged out</h1>
+
+        <p>Thank you for using EXPO IAU Platform.</p>
+
+        <a href="index.php" class="btn-login"> Back to Home </a>
+      </div>
+    </main>
+
+    <script>
+      /* Logout process */
+      localStorage.removeItem("user");
+      localStorage.removeItem("token");
+      sessionStorage.clear();
+
+      console.log("User logged out");
+    </script>
+    <!-- FOOTER -->
+    <div class="footer-img">
+      <img src="footer.png" />
+      <div class="footer-text" id="footerText">
+        Vice Deanship of Scientific Research and Innovation
+      </div>
+    </div>
+  </body>
+</html>

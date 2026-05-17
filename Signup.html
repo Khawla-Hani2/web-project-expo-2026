@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-en="EXPO 2026 | Sign Up" data-ar="اكسبو 2026 | التسجيل">
+      EXPO 2026 | Sign Up
+    </title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Signup.css" />
+  </head>
+  <body>
+    <div class="top-strip">
+      <div class="logoL"><img src="IAU_logo_white.png" alt="IAU" /></div>
+
+      <div class="seg s1">
+        <img src="user_vector.png" /><span
+          id="t1"
+          data-en="Sign-up"
+          data-ar="تسجيل"
+          >Sign-up</span
+        >
+      </div>
+      <div class="seg s2">
+        <img src="Human_Health.png" /><span
+          id="t2"
+          data-en="Health"
+          data-ar="الصحة"
+          >Health</span
+        >
+      </div>
+      <div class="seg s3">
+        <img src="Future_Economies.png" /><span
+          id="t3"
+          data-en="Economies"
+          data-ar="الاقتصاد"
+          >Economies</span
+        >
+      </div>
+      <div class="seg s4">
+        <img src="Environmental_Sustainability.png" /><span
+          id="t4"
+          data-en="Sustainability"
+          data-ar="الاستدامة"
+          >Sustainability</span
+        >
+      </div>
+      <div class="seg s5">
+        <img src="Energy_and_Industry.png" /><span
+          id="t5"
+          data-en="Energy"
+          data-ar="الطاقة"
+          >Energy</span
+        >
+      </div>
+      <div class="seg s6">
+        <img src="Education_and_Development.png" /><span
+          id="t6"
+          data-en="Education"
+          data-ar="التعليم"
+          >Education</span
+        >
+      </div>
+      <div class="seg s7">
+        <img src="Research_Publications.png" /><span
+          id="t7"
+          data-en="Research"
+          data-ar="الأبحاث"
+          >Research</span
+        >
+      </div>
+
+      <div class="logoR">
+        <img src="expo2026_en_white.png" id="expoLogo" alt="Expo Logo" />
+      </div>
+    </div>
+
+    <div class="lang-btn" onclick="toggleLang()">
+      <img src="lang.png" alt="Language" />
+    </div>
+
+    <div class="page-wrapper">
+      <div class="form-box">
+        <h2 data-en="Sign Up" data-ar="إنشاء حساب">Sign Up</h2>
+
+        <form id="signupForm">
+          <label data-en="First Name" data-ar="الاسم الأول">First Name</label>
+          <input type="text" id="firstName" name="firstName" required />
+
+          <label data-en="Last Name" data-ar="اسم العائلة">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required />
+
+          <label data-en="Email" data-ar="البريد الإلكتروني">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label data-en="Password" data-ar="كلمة المرور">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            minlength="6"
+          />
+
+          <label data-en="Phone Number" data-ar="رقم الجوال"
+            >Phone Number</label
+          >
+          <input
+            type="tel"
+            id="phone"
+            name="phone_number"
+            placeholder="05XXXXXXXX"
+            required
+          />
+
+          <label data-en="Choose Role" data-ar="اختر الدور">Choose Role</label>
+          <select id="role" name="role" required>
+            <option value="" data-en="Select Role" data-ar="اختر الدور">
+              Select Role
+            </option>
+            <option value="student" data-en="Student" data-ar="طالب">
+              Student
+            </option>
+            <option value="guest" data-en="Guest" data-ar="زائر">Guest</option>
+          </select>
+
+          <button
+            type="submit"
+            class="submit"
+            data-en="Sign Up"
+            data-ar="تسجيل"
+          >
+            Sign Up
+          </button>
+          <button
+            type="button"
+            class="logIn"
+            onclick="location.href = 'login.html'"
+            data-en="Log In"
+            data-ar="تسجيل الدخول"
+          >
+            Log In
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-img">
+        <img src="footer.png" alt="footer" />
+        <div
+          class="footer-text"
+          data-en="All rights reserved © Expo 2026"
+          data-ar="جميع الحقوق محفوظة © اكسبو 2026"
+        >
+          All rights reserved © Expo 2026
+        </div>
+      </div>
+    </div>
+
+    <script src="Signup.js"></script>
+  </body>
+</html>

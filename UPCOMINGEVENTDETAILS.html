@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXPO IAU 2026 | Upcoming Event Details</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="upcomingeventdetails.css">
+</head>
+
+<body class="upcoming-event-details-page" onclick="outsideClick(event)">
+
+  <div class="top-strip">
+    <div class="logoL"><img src="IAU_logo_white.png" alt="IAU Logo"></div>
+
+    <div class="seg s1"><img src="user_vector.png" alt=""><span id="t1">Sign-up</span></div>
+    <div class="seg s2"><img src="Human_Health.png" alt=""><span id="t2">Health</span></div>
+    <div class="seg s3"><img src="Future_Economies.png" alt=""><span id="t3">Economies</span></div>
+    <div class="seg s4"><img src="Environmental_Sustainability.png" alt=""><span id="t4">Sustainability</span></div>
+    <div class="seg s5"><img src="Energy_and_Industry.png" alt=""><span id="t5">Energy</span></div>
+    <div class="seg s6"><img src="Education_and_Development.png" alt=""><span id="t6">Education</span></div>
+    <div class="seg s7"><img src="Research_Publications.png" alt=""><span id="t7">Research</span></div>
+
+    <div class="logoR"><img src="expo2026_en_white.png" id="expoLogo" alt="Expo Logo"></div>
+  </div>
+
+  <div class="subbar">
+    <div class="menu-btn" onclick="toggleMenu(event)">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div class="lang-btn" onclick="toggleLang()">
+      <img src="lang.png" alt="Language">
+    </div>
+  </div>
+
+  <div class="side-menu" id="menu">
+    <div class="close-x" onclick="toggleMenu(event)">×</div>
+
+    <a href="index.php" id="m1">Home</a>
+    <a href="About.html" id="m2">About</a>
+    <a href="UPCOMINGEVENTDETAILS.html" id="m3">Upcoming Event Details</a>
+    <a href="achievements.html" id="m4">Achievements</a>
+    <a href="EventSchedule.html" id="m5">Event Schedule</a>
+    <a href="sponsor.html" id="m6">Sponsors</a>
+  </div>
+
+  <main class="main-content">
+
+    <h1 class="page-title" id="pageTitle">Upcoming Event Details</h1>
+
+    <p class="page-subtitle" id="pageSubtitle">
+      View event information, speaker details, schedule, hall, and meeting link.
+    </p>
+
+    <section class="card">
+      <h2 class="section-title" id="sectionTitle1">Event Information</h2>
+
+      <div class="grid">
+
+        <div class="info-block">
+          <h3 class="block-title" id="blockTitle1">Event Title</h3>
+          <p id="viewTitle" class="block-value">Research Innovation Workshop</p>
+        </div>
+
+        <div class="info-block">
+          <h3 class="block-title" id="blockTitle2">Event Link</h3>
+          <a id="viewLink" class="event-link" href="https://example.com" target="_blank">
+            Join Online Event
+          </a>
+        </div>
+
+        <div class="info-block">
+          <h3 class="block-title" id="blockTitle3">Speaker Information</h3>
+          <p class="block-value"><strong id="speakerNameLabel">Name:</strong> <span id="viewName">Dr. Ahmed Ali</span></p>
+          <p class="block-value"><strong id="speakerRoleLabel">Position:</strong> <span id="viewRole">Associate Professor</span></p>
+          <p class="block-value"><strong id="speakerEmailLabel">Email:</strong> <span id="viewEmail">speaker@example.com</span></p>
+        </div>
+
+        <div class="info-block">
+          <h3 class="block-title" id="blockTitle4">Date & Time</h3>
+          <p class="block-value"><strong id="dateLabel">Date:</strong> <span id="viewDate">2026-03-15</span></p>
+          <p class="block-value"><strong id="startLabel">Start:</strong> <span id="viewStart">10:00</span></p>
+          <p class="block-value"><strong id="endLabel">End:</strong> <span id="viewEnd">12:00</span></p>
+          <p class="block-value"><strong id="hallLabel">Hall:</strong> <span id="viewHall">Main Hall</span></p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="card hidden" id="adminPanel">
+      <h2 class="section-title" id="sectionTitle2">Admin Controls</h2>
+
+      <form id="adminForm">
+
+        <fieldset class="fieldset">
+          <legend class="legend" id="legend1">Edit Event Information</legend>
+
+          <label class="label" for="titleInput" id="label1">Event Title</label>
+          <input class="input" type="text" id="titleInput" value="Research Innovation Workshop" required>
+
+          <label class="label" for="nameInput" id="label2">Speaker Name</label>
+          <input class="input" type="text" id="nameInput" value="Dr. Ahmed Ali" required>
+
+          <label class="label" for="roleInput" id="label3">Speaker Position</label>
+          <input class="input" type="text" id="roleInput" value="Associate Professor" required>
+
+          <label class="label" for="emailInput" id="label4">Speaker Email</label>
+          <input class="input" type="email" id="emailInput" value="speaker@example.com" required>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="legend" id="legend2">Edit Date & Time</legend>
+
+          <label class="label" for="dateInput" id="label5">Date</label>
+          <input class="input" type="date" id="dateInput" value="2026-03-15" required>
+
+          <label class="label" for="startInput" id="label6">Start Time</label>
+          <input class="input" type="time" id="startInput" value="10:00" required>
+
+          <label class="label" for="endInput" id="label7">End Time</label>
+          <input class="input" type="time" id="endInput" value="12:00" required>
+
+          <label class="label" for="hallInput" id="label8">Hall</label>
+          <select class="input" id="hallInput">
+            <option>Main Hall</option>
+            <option>Green Hall</option>
+            <option>Official Hall</option>
+          </select>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend class="legend" id="legend3">Update Meeting Link</legend>
+
+          <label class="label" for="linkInput" id="label9">Meeting URL</label>
+          <input class="input" type="url" id="linkInput" value="https://example.com" required>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="btn" id="saveBtn">Save Changes</button>
+          <button type="reset" class="btn btn-ghost" id="resetBtn">Reset</button>
+        </div>
+
+      </form>
+    </section>
+
+    <div class="admin-end">
+      <button id="adminBtn" type="button" class="btn">Admin Mode</button>
+      <button id="exitBtn" type="button" class="btn btn-ghost hidden">Exit Admin</button>
+    </div>
+
+  </main>
+
+  <div class="footer-img">
+    <img src="footer.png" alt="Footer">
+    <div class="footer-text" id="footerText">
+      Vice Deanship of Scientific Research and Innovation
+    </div>
+  </div>
+
+  <script src="UPCOMINGEVENTDETAILS.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!-- Raghad Hadi Alasfoor-->
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXPO 2026 | Log In</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css" />
+    <base target="_blank" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="top-strip">
+      <div class="logoL"><img src="IAU_logo_white.png" /></div>
+
+      <div class="seg s1">
+        <img src="user_vector.png" />
+        <span id="t1" data-en="Sign-up" data-ar="تسجيل">Sign-up</span>
+      </div>
+
+      <div class="seg s2">
+        <img src="Human_Health.png" />
+        <span id="t2" data-en="Health" data-ar="صحة الإنسان">Health</span>
+      </div>
+
+      <div class="seg s3">
+        <img src="Future_Economies.png" />
+        <span id="t3" data-en="Economies" data-ar="اقتصاديات المستقبل"
+          >Economies</span
+        >
+      </div>
+
+      <div class="seg s4">
+        <img src="Environmental_Sustainability.png" />
+        <span id="t4" data-en="Sustainability" data-ar="استدامة البيئة"
+          >Sustainability</span
+        >
+      </div>
+
+      <div class="seg s5">
+        <img src="Energy_and_Industry.png" />
+        <span id="t5" data-en="Energy" data-ar="الطاقة والصناعة">Energy</span>
+      </div>
+
+      <div class="seg s6">
+        <img src="Education_and_Development.png" />
+        <span id="t6" data-en="Education" data-ar="التعليم والقدرات"
+          >Education</span
+        >
+      </div>
+
+      <div class="seg s7">
+        <img src="Research_Publications.png" />
+        <span id="t7" data-en="Research" data-ar="الأبحاث المنشورة"
+          >Research</span
+        >
+      </div>
+
+      <div class="logoR">
+        <img src="expo2026_en_white.png" id="expoLogo" />
+      </div>
+    </div>
+
+    <div class="lang-btn" onclick="toggleLang()">
+      <img src="lang.png" />
+    </div>
+
+    <div class="page-wrapper">
+      <div class="form-box">
+        <h2 id="pageTitle" data-en="Log In" data-ar="تسجيل الدخول">Log In</h2>
+
+        <form id="loginForm">
+          <label id="labelEmail" data-en="Email" data-ar="البريد الإلكتروني"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            data-en-placeholder="Enter your email"
+            data-ar-placeholder="أدخل بريدك الإلكتروني"
+            placeholder="Enter your email"
+          />
+
+          <label id="labelPassword" data-en="Password" data-ar="كلمة المرور"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            data-en-placeholder="Enter your password"
+            data-ar-placeholder="أدخل كلمة المرور"
+            placeholder="Enter your password"
+          />
+
+          <p
+            id="errorMsg"
+            style="color: red; font-size: 13px; margin-top: -8px; display: none"
+          ></p>
+
+          <button
+            type="submit"
+            class="submit"
+            id="loginBtn"
+            data-en="Log In"
+            data-ar="دخول"
+          >
+            Log In
+          </button>
+
+          <button
+            type="button"
+            class="logIn"
+            onclick="location.href = 'Signup.html'"
+            id="signupBtn"
+            data-en="Sign Up"
+            data-ar="إنشاء حساب"
+          >
+            Sign Up
+          </button>
+
+          <button
+            type="button"
+            class="logIn"
+            onclick="location.href = 'forgot_password.html'"
+            id="forgotBtn"
+            data-en="Forgot Password?"
+            data-ar="نسيت كلمة المرور؟"
+          >
+            Forgot Password?
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-img">
+      <img src="footer.png" />
+      <div
+        class="footer-text"
+        id="footerText"
+        data-en="Vice Deanship of Scientific Research and Innovation"
+        data-ar="وكالة عمادة البحث العلمي والابتكار"
+      >
+        Vice Deanship of Scientific Research and Innovation
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

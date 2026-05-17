@@ -1,0 +1,140 @@
+/*Khawla ALmoalem & Fatimah Al-Qurain*/
+.page-wrapper{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+}
+
+/* Box*/
+
+.form-box{
+  width:420px;
+  background:#fff;
+  padding:30px 28px;
+  border-radius:18px;
+  box-shadow:0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+
+.form-box h2{
+  text-align:center;
+  color:var(--main);
+  font-size:26px;
+  margin-bottom:20px;
+  font-weight:700;
+}
+
+/*Form */
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+/*Labels*/
+
+label{
+  font-size:14px;
+  font-weight:700;
+  color:#632949;
+}
+
+/* Inputs */
+
+input, select{
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid #ddd;
+  font-size:14px;
+  outline:none;
+  transition:0.2s;
+  background:#fff;
+}
+
+/* Focus */
+
+input:focus, select:focus{
+  border-color:var(--main);
+  box-shadow:0 0 0 2px rgba(99,41,73,0.15);
+}
+
+/*Buttons*/
+
+button{
+  padding:12px;
+  border-radius:14px;
+  border:none;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+/* Sign Up*/
+
+.submit{
+  background:var(--main);
+  color:#fff;
+  margin-top:10px;
+}
+
+.submit:hover{
+  transform:translateY(-2px);
+  background:#4e2038;
+}
+
+.logIn{
+  background:#fff;
+  color:var(--main);
+  border:2px solid var(--main);
+}
+
+.logIn:hover{
+  background:var(--main);
+  color:#fff;
+}
+/*Footer */
+
+.footer{
+  margin-top:auto;
+}
+
+.footer-img{
+  position:relative;
+  width:100%;
+  line-height:0;
+}
+
+.footer-img img{
+  width:100%;
+  display:block;
+}
+
+.footer-text{
+  position:absolute;
+  bottom:10px;
+  right:0;
+  padding:14px 28px;
+  font-size:14px;
+  font-weight:700;
+  color:#fff;
+}
+
+
+[dir="ltr"] .footer-text{
+  right:auto;
+  left:0;
+  text-align:left;
+}
+
+/* Responsive  */
+
+@media(max-width:480px){
+  .form-box{
+    width:100%;
+    padding:22px;
+  }
+}

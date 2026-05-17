@@ -1,0 +1,158 @@
+/*Khawka Almoalem*/
+.logout-wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:calc(100vh - 150px);
+  padding:20px;
+}
+
+.logout-card{
+  background:#fff;
+  width:100%;
+  max-width:420px;
+  padding:40px 30px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 12px 35px rgba(0,0,0,0.15);
+  animation:fadeUp .6s ease;
+}
+
+/* Title */
+.logout-card h1{
+  color:var(--main);
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+/* Text */
+.logout-card p{
+  color:#555;
+  font-size:15px;
+  margin-bottom:25px;
+}
+
+/* Button */
+.btn-login{
+  display:inline-block;
+  padding:14px 20px;
+  border-radius:12px;
+  background:var(--main);
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  transition:.3s;
+}
+
+/* Hover */
+.btn-login:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== Animation ===== */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/*Logos Position*/
+.global-logo-iau,
+.global-logo-expo{
+  position:absolute;
+  top:20px;
+  width:90px;
+  height:90px;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+/* IAU Logo */
+.global-logo-iau{
+  left:20px;
+  background-image:url("IAU_logo_white.png");
+}
+
+/* Expo Logo */
+.global-logo-expo{
+  right:20px;
+  background-image:url("expo2026_en_white.png");
+}
+
+/* RTL Fix */
+[dir="rtl"] .global-logo-iau{
+  right:20px;
+  left:auto;
+}
+
+[dir="rtl"] .global-logo-expo{
+  left:20px;
+  right:auto;
+}
+
+/* Header */
+.header{
+  text-align:center;
+  margin-top:40px;
+}
+
+.header-title{
+  font-size:32px;
+  color:var(--main);
+}
+/* Footer */
+
+.footer{
+  margin-top:auto;
+}
+
+.footer-img{
+  position:relative;
+  width:100%;
+  line-height:0;
+}
+
+.footer-img img{
+  width:100%;
+  display:block;
+}
+
+.footer-text{
+  position:absolute;
+  bottom:10px;
+  right:0;
+  padding:14px 28px;
+  font-size:14px;
+  font-weight:700;
+  color:#fff;
+}
+
+
+[dir="ltr"] .footer-text{
+  right:auto;
+  left:0;
+  text-align:left;
+}
+
+/*Mobile */
+@media(max-width:768px){
+
+  .logout-card{
+    padding:30px 20px;
+  }
+
+  .logout-card h1{
+    font-size:22px;
+  }
+
+  .header-title{
+    font-size:26px;
+  }
+
+}

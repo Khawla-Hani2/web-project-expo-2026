@@ -1,0 +1,132 @@
+/* ===== Form Container ===== */
+.main-content{
+  width:100%;
+  min-height:calc(100vh - 160px); 
+  background:#fff;
+  padding:50px 0;
+}
+
+.main-content form,
+.main-content{
+  max-width:900px;
+  margin:auto;
+  padding:40px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  background:#fff;
+}
+
+/* ===== Title ===== */
+.main-content h2{
+  text-align:center;
+  color:var(--main);
+  margin-bottom:25px;
+  font-size:30px;
+  font-weight:700;
+}
+
+/* ===== Inputs & Textarea ===== */
+.main-content input,
+.main-content textarea,
+.main-content select{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ddd;
+  font-size:14px;
+  transition:0.3s;
+  background:#fafafa;
+}
+
+.main-content textarea{
+  min-height:120px;
+  resize:none;
+}
+
+/* ===== Focus Effect ===== */
+.main-content input:focus,
+.main-content textarea:focus,
+.main-content select:focus{
+  border-color:var(--main);
+  background:#fff;
+  outline:none;
+  box-shadow:0 0 6px rgba(99,41,73,0.2);
+}
+
+/* ===== Labels ===== */
+.main-content label{
+  font-size:14px;
+  color:#444;
+  margin-top:10px;
+  display:block;
+  font-weight:500;
+}
+
+/* ===== Submit Button ===== */
+.main-content button{
+  width:100%;
+  padding:14px;
+  margin-top:20px;
+  background:var(--main);
+  color:#fff;
+  border:none;
+  border-radius:12px;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.main-content button:hover{
+  background:#4e1f38;
+}
+
+/* ===== Member Box ===== */
+.member-box{
+  background:#f9f6f8;
+  border:1px solid #eee;
+  padding:15px;
+  border-radius:12px;
+  margin-top:12px;
+  animation:fadeIn 0.3s ease;
+}
+
+.member-box h4{
+  color:var(--main);
+  margin-bottom:10px;
+  font-size:16px;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(10px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== Responsive ===== */
+@media (max-width:768px){
+
+  .main-content{
+    padding:20px 0;
+  }
+
+  .main-content form,
+  .main-content{
+    margin:15px;
+    padding:25px;
+  }
+
+  .top-strip{
+    flex-wrap:wrap;
+  }
+
+  .seg{
+    font-size:12px;
+  }
+
+  .seg img{
+    width:24px;
+    height:24px;
+  }
+}
