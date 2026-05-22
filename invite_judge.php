@@ -45,22 +45,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // THIS SHOULD ONLY HAPPEN ONCE
     if ($insert_stmt->execute()) {
         
-        $invite_link = "http://localhost/my_project/setup_judge.php?token=" . $token;
+        $invite_link = "http://localhost/expo2026/setup_judge.php?token=" . $token;
         $mail = new PHPMailer(true);
 
         try {
             // Server settings
-            $mail->SMTPDebug = 0; 
-            $mail->isSMTP();
-            $mail->Host       = 'smtp.gmail.com'; 
-            $mail->SMTPAuth   = true;
-            
-            // 🛑 STOP: YOU MUST CHANGE THESE TWO LINES TO YOUR ACTUAL EMAIL & PASSWORD 🛑
-            $mail->Username   = 'khawlahani18@gmail.com'; 
-            $mail->Password   = 'jvomvifgqluacgqq';    
-            
-            $mail->SMTPSecure = 'tls';
-            $mail->Port       = 587;
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'khawlahani18@gmail.com';
+        $mail->Password   = 'jvomvifgqluacgqq';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = 587;
+
+        $mail->SMTPOptions = [
+            'ssl' => [
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            ]
+        ];
 
             // Recipients
             $mail->setFrom('khawlahani18@gmail.com', 'EXPO IAU 2026');

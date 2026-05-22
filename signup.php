@@ -11,6 +11,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'db.php';
+$input = json_decode(file_get_contents("php://input"), true);
 
 function sendEmailNotification($toEmail, $toName, $subject, $messageHTML, $messageText) {
     $mail = new PHPMailer(true);
@@ -35,7 +36,7 @@ function sendEmailNotification($toEmail, $toName, $subject, $messageHTML, $messa
         $mail->Timeout   = 10;
         $mail->SMTPDebug = 0;
 
-        $mail->setFrom('khawlahani18@gmail.com', 'EXPO IAU 2026');
+        $mail->setFrom('khawlahani18@gmail.com', 'EXPO 2026');
         $mail->addAddress($toEmail, $toName);
 
         $mail->isHTML(true);
@@ -124,10 +125,10 @@ if ($role === 'judge') {
     $judgeStmt->close();
 }
 
-$base_url = "http://localhost/my_project";
+$base_url = "http://localhost/expo2026";
 $activationLink = $base_url . "/verify.php?token=" . $verificationToken;
 
-$subject = 'تفعيل حسابك في EXPO IAU 2026 | Activate your EXPO IAU 2026 account';
+$subject = 'تفعيل حسابك في EXPO IAU 2026 | Activate your EXPO 2026 account';
 
 $messageHTML = '<!DOCTYPE html>
 <html lang="ar" dir="rtl">

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Registration | EXPO IAU 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="visitor.css">
+</head>
+<body>
+ 
+<!-- TOP BAR -->
+<div class="top-strip">
+    <div class="logoL"><img src="IAU_logo_white.png" alt="IAU Logo"></div>
+    <div class="seg s1"><img src="user_vector.png"><span id="t1">Sign-up</span></div>
+    <div class="seg s2"><img src="Human_Health.png"><span id="t2">Health</span></div>
+    <div class="seg s3"><img src="Future_Economies.png"><span id="t3">Economies</span></div>
+    <div class="seg s4"><img src="Environmental_Sustainability.png"><span id="t4">Sustainability</span></div>
+    <div class="seg s5"><img src="Energy_and_Industry.png"><span id="t5">Energy</span></div>
+    <div class="seg s6"><img src="Education_and_Development.png"><span id="t6">Education</span></div>
+    <div class="seg s7"><img src="Research_Publications.png"><span id="t7">Research</span></div>
+    <div class="logoR"><img src="expo2026_en_white.png" id="expoLogo"></div>
+</div>
+
+<!-- Sub bar with language button -->
+<div class="subbar">
+    <div class="menu-btn" onclick="toggleMenu(event)"><div></div><div></div><div></div></div>
+    <div class="lang-btn" onclick="window.toggleLang()"><img src="lang.png" alt="Language"></div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="visitor-reg-container">
+    <div class="visitor-reg-card">
+        <div class="visitor-reg-header">
+            <h1><i class="fas fa-user-check"></i> <span id="titleText">Visitor Registration</span></h1>
+            <p id="subtitleText">Please fill in your details to confirm your attendance at EXPO IAU 2026</p>
+        </div>
+
+        <!-- Registration Form -->
+        <div id="regForm" class="reg-form-section">
+            <div class="form-group">
+                <label id="labelFullName">Full Name <span class="required">*</span></label>
+                <input type="text" id="fullName" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label id="labelEmail">Email <span class="required">*</span></label>
+                <input type="email" id="email" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+                <label id="labelPhone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" placeholder="+966 XXXXXXXX">
+            </div>
+            <div class="form-row">
+                <div class="form-group half">
+                    <label id="labelOrganization">Organization (Optional)</label>
+                    <input type="text" id="organization" placeholder="Company / University">
+                </div>
+                <div class="form-group half">
+                    <label id="labelPosition">Position (Optional)</label>
+                    <input type="text" id="position" placeholder="Job title">
+                </div>
+            </div>
+            <button id="submitRegisterBtn" class="btn-primary"><span id="registerBtnText">Register & Get Entry Pass</span></button>
+        </div>
+
+        <!-- QR Code Section -->
+        <div id="qrSection" class="qr-section" style="display: none;">
+            <div class="qr-icon"><i class="fas fa-qrcode"></i></div>
+            <h3 id="qrTitle">Your Entry Pass</h3>
+            <div id="qrcode" class="qrcode-container"></div>
+            <p id="qrSaveMsg"><i class="fas fa-info-circle"></i> Please save or screenshot this QR code.</p>
+            <p class="qr-note" id="qrInstruction">Show this QR at the entrance of EXPO IAU 2026.</p>
+            <button id="downloadQrBtn" class="btn-outline"><i class="fas fa-download"></i> <span id="downloadBtnText">Download QR Code</span></button>
+            <button id="continueToSiteBtn" class="btn-primary"><i class="fas fa-arrow-right"></i> <span id="continueBtnText">Continue to Website</span></button>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-img">
+    <img src="footer.png" alt="Footer">
+    <div class="footer-text" id="footerText">Vice Deanship of Scientific Research and Innovation</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script src="visitor.js"></script>
+</body>
+</html>

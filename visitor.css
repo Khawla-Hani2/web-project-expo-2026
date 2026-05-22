@@ -1,0 +1,141 @@
+:root {
+    --primary: #632949;
+    --primary-dark: #4e1f38;
+    --primary-soft: #63294915;
+    --bg: #F5F5F5;
+    --white: #ffffff;
+    --border: #e0e0e0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: var(--bg);
+    font-family: 'ExpoFont', sans-serif;
+}
+.visitor-reg-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.visitor-reg-card {
+    background: var(--white);
+    border-radius: 28px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border: 1px solid var(--border);
+}
+.visitor-reg-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.visitor-reg-header h1 {
+    color: var(--primary);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.visitor-reg-header p {
+    color: #666;
+    font-size: 14px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+.required {
+    color: #f44336;
+}
+.form-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-soft);
+}
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+.form-group.half {
+    flex: 1;
+}
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 12px 24px;
+    border-radius: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+.qr-section {
+    text-align: center;
+}
+.qr-icon i {
+    font-size: 60px;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+.qrcode-container {
+    display: inline-block;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    margin: 20px 0;
+    border: 1px solid var(--border);
+}
+.qr-note {
+    background: var(--primary-soft);
+    padding: 10px;
+    border-radius: 12px;
+    color: var(--primary);
+    font-weight: 500;
+    margin-top: 15px;
+}
+@media (max-width: 768px) {
+    .visitor-reg-container {
+        margin: 20px auto;
+    }
+    .visitor-reg-card {
+        padding: 20px;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

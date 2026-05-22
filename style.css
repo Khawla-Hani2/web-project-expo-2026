@@ -2,8 +2,6 @@
    EXPO2026 — Global Styles
    ============================================ */
 
-/*Fatimah Al-Qurain*/
-
 /* ---------- Fonts ---------- */
 @font-face {
   font-family: "ExpoFont";
@@ -26,7 +24,7 @@
 
 /* ---------- General Settings ---------- */
 :root {
-  --main: #632949;
+  --main: #041164;
   --bg: #f5f5f5;
 }
 * {
@@ -55,7 +53,7 @@ html[dir="ltr"] body {
   display: flex;
   align-items: stretch;
   width: 100%;
-  background: #632949;
+  background: #041164;
 }
 .top-strip > div {
   display: flex;
@@ -239,7 +237,7 @@ html[dir="ltr"] body {
   flex: 1;
 }
 .center h1 {
-  color: #632949;
+  color: #041164;
   font-size: 46px;
   margin-bottom: 8px;
 }
@@ -261,7 +259,7 @@ html[dir="ltr"] body {
   width: 120px;
 }
 .time-box h2 {
-  color: #632949;
+  color: #041164;
   font-size: 36px;
 }
 
