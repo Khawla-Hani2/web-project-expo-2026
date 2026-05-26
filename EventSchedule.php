@@ -1,5 +1,5 @@
 <?php
-$lang = $_GET['lang'] ?? 'en';
+$lang = $_GET['lang'] ?? 'ar';
 $lang = ($lang === 'ar') ? 'ar' : 'en';
 ?>
 <!DOCTYPE html>

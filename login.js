@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  let currentLang = localStorage.getItem("lang") || "en";
+  let currentLang = localStorage.getItem("lang") || "ar";
 
   // ── APPLY LANGUAGE ──
   function applyPageLanguage(lang) {

@@ -49,7 +49,7 @@ while($row = mysqli_fetch_assoc($query)){
 ?>
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 
 <head>
 
@@ -59,7 +59,7 @@ while($row = mysqli_fetch_assoc($query)){
 content="width=device-width, initial-scale=1.0">
 
 <title>
-EXPO IAU 2026 | Final Results
+EXPO 2026 | Final Results
 </title>
 
 <link rel="stylesheet" href="style.css">

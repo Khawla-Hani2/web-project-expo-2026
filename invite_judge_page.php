@@ -450,7 +450,7 @@ if ($judgeQuery) {
     </div>
 
     <script>
-        let currentLang = localStorage.getItem("expo_lang") || "en";
+        let currentLang = localStorage.getItem("expo_lang") || "ar";
 
         function applyLanguage(lang) {
             const html = document.documentElement;

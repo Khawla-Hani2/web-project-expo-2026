@@ -3,7 +3,7 @@
 
 /* profile.js — Unified for header.php + main.js */
 (function () {
-  let currentLang = localStorage.getItem("lang") || "en";
+  let currentLang = localStorage.getItem("lang") || "ar";
 
   function applyProfileLanguage(lang) {
     document.querySelectorAll("[data-en][data-ar]").forEach(function (el) {

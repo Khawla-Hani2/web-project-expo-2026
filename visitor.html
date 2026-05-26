@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visitor Registration | EXPO IAU 2026</title>
+    <title>Visitor Registration | EXPO 2026</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="visitor.css">
 </head>
 <body>
- 
+
 <!-- TOP BAR -->
 <div class="top-strip">
     <div class="logoL"><img src="IAU_logo_white.png" alt="IAU Logo"></div>
@@ -23,7 +23,6 @@
     <div class="logoR"><img src="expo2026_en_white.png" id="expoLogo"></div>
 </div>
 
-<!-- Sub bar with language button -->
 <div class="subbar">
     <div class="menu-btn" onclick="toggleMenu(event)"><div></div><div></div><div></div></div>
     <div class="lang-btn" onclick="window.toggleLang()"><img src="lang.png" alt="Language"></div>
@@ -42,14 +41,17 @@
             <div class="form-group">
                 <label id="labelFullName">Full Name <span class="required">*</span></label>
                 <input type="text" id="fullName" placeholder="Enter your full name">
+                <small class="error-msg" id="errorName" style="display:none;"></small>
             </div>
             <div class="form-group">
                 <label id="labelEmail">Email <span class="required">*</span></label>
                 <input type="email" id="email" placeholder="your@email.com">
+                <small class="error-msg" id="errorEmail" style="display:none;"></small>
             </div>
             <div class="form-group">
                 <label id="labelPhone">Phone Number <span class="required">*</span></label>
                 <input type="tel" id="phone" placeholder="+966 XXXXXXXX">
+                <small class="error-msg" id="errorPhone" style="display:none;"></small>
             </div>
             <div class="form-row">
                 <div class="form-group half">
@@ -61,17 +63,15 @@
                     <input type="text" id="position" placeholder="Job title">
                 </div>
             </div>
-            <button id="submitRegisterBtn" class="btn-primary"><span id="registerBtnText">Register & Get Entry Pass</span></button>
+            <div id="generalError" class="error-msg general-error" style="display:none;"></div>
+            <button id="submitRegisterBtn" class="btn-primary"><span id="registerBtnText">Register</span></button>
         </div>
 
-        <!-- QR Code Section -->
-        <div id="qrSection" class="qr-section" style="display: none;">
-            <div class="qr-icon"><i class="fas fa-qrcode"></i></div>
-            <h3 id="qrTitle">Your Entry Pass</h3>
-            <div id="qrcode" class="qrcode-container"></div>
-            <p id="qrSaveMsg"><i class="fas fa-info-circle"></i> Please save or screenshot this QR code.</p>
-            <p class="qr-note" id="qrInstruction">Show this QR at the entrance of EXPO IAU 2026.</p>
-            <button id="downloadQrBtn" class="btn-outline"><i class="fas fa-download"></i> <span id="downloadBtnText">Download QR Code</span></button>
+        <!-- Success Message -->
+        <div id="successSection" class="success-section" style="display: none;">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h3 id="successTitle">Registration Confirmed!</h3>
+            <p id="successMessage">Thank you for registering. You will receive a confirmation email shortly.</p>
             <button id="continueToSiteBtn" class="btn-primary"><i class="fas fa-arrow-right"></i> <span id="continueBtnText">Continue to Website</span></button>
         </div>
     </div>
@@ -83,7 +83,6 @@
     <div class="footer-text" id="footerText">Vice Deanship of Scientific Research and Innovation</div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 <script src="visitor.js"></script>
 </body>
 </html>

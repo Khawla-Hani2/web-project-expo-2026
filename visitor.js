@@ -1,3 +1,4 @@
+// ==================== LANGUAGE TRANSLATIONS ====================
 const translations = {
     en: {
         title: "Visitor Registration",
@@ -7,11 +8,9 @@ const translations = {
         phone: "Phone Number *",
         organization: "Organization (Optional)",
         position: "Position (Optional)",
-        registerBtn: "Register & Get Entry Pass",
-        qrTitle: "Your Entry Pass",
-        qrSaveMsg: "Please save or screenshot this QR code.",
-        qrInstruction: "Show this QR at the entrance of EXPO IAU 2026.",
-        downloadBtn: "Download QR Code",
+        registerBtn: "Register",
+        successTitle: "Registration Confirmed!",
+        successMessage: "Thank you for registering. You will receive a confirmation email shortly.",
         continueBtn: "Continue to Website",
         footer: "Vice Deanship of Scientific Research and Innovation",
         placeholderName: "Enter your full name",
@@ -19,13 +18,13 @@ const translations = {
         placeholderPhone: "+966 XXXXXXXX",
         placeholderOrg: "Company / University",
         placeholderPosition: "Job title",
-        // top bar
         t1: "Sign-up", t2: "Health", t3: "Economies", t4: "Sustainability",
         t5: "Energy", t6: "Education", t7: "Research",
-        // alerts
-        nameRequired: "Please enter your full name",
-        emailInvalid: "Please enter a valid email",
-        phoneRequired: "Please enter your phone number"
+        errorName: "Please enter your full name",
+        errorEmail: "Please enter a valid email address",
+        errorPhone: "Please enter your phone number",
+        errorConnection: "Connection error. Please try again.",
+        errorServer: "Server error. Please try again."
     },
     ar: {
         title: "تسجيل الزائر",
@@ -35,11 +34,9 @@ const translations = {
         phone: "رقم الجوال *",
         organization: "جهة العمل (اختياري)",
         position: "المنصب (اختياري)",
-        registerBtn: "تسجيل والحصول على بطاقة الدخول",
-        qrTitle: "بطاقة الدخول الخاصة بك",
-        qrSaveMsg: "يرجى حفظ أو تصوير رمز QR هذا",
-        qrInstruction: "أظهر هذا الرمز عند مدخل إكسبو 2026",
-        downloadBtn: "تحميل رمز QR",
+        registerBtn: "تسجيل",
+        successTitle: "تم تأكيد التسجيل!",
+        successMessage: "شكراً لتسجيلك. ستصلك رسالة تأكيد عبر البريد الإلكتروني قريباً.",
         continueBtn: "متابعة إلى الموقع",
         footer: "وكالة البحث والابتكار العلمي",
         placeholderName: "أدخل اسمك الكامل",
@@ -49,9 +46,11 @@ const translations = {
         placeholderPosition: "المسمى الوظيفي",
         t1: "تسجيل الدخول", t2: "صحة الإنسان", t3: "اقتصاديات المستقبل", t4: "استدامة البيئة",
         t5: "الطاقة والصناعة", t6: "التعليم والقدرات", t7: "الأبحاث المنشورة",
-        nameRequired: "يرجى إدخال الاسم الكامل",
-        emailInvalid: "يرجى إدخال بريد إلكتروني صحيح",
-        phoneRequired: "يرجى إدخال رقم الجوال"
+        errorName: "يرجى إدخال الاسم الكامل",
+        errorEmail: "يرجى إدخال بريد إلكتروني صحيح",
+        errorPhone: "يرجى إدخال رقم الجوال",
+        errorConnection: "خطأ في الاتصال. يرجى المحاولة مرة أخرى",
+        errorServer: "خطأ في الخادم. يرجى المحاولة مرة أخرى"
     }
 };
 
@@ -67,10 +66,8 @@ function applyLanguage() {
     document.getElementById('labelOrganization').innerText = t.organization;
     document.getElementById('labelPosition').innerText = t.position;
     document.getElementById('registerBtnText').innerText = t.registerBtn;
-    document.getElementById('qrTitle').innerText = t.qrTitle;
-    document.getElementById('qrSaveMsg').innerHTML = `<i class="fas fa-info-circle"></i> ${t.qrSaveMsg}`;
-    document.getElementById('qrInstruction').innerText = t.qrInstruction;
-    document.getElementById('downloadBtnText').innerText = t.downloadBtn;
+    document.getElementById('successTitle').innerText = t.successTitle;
+    document.getElementById('successMessage').innerText = t.successMessage;
     document.getElementById('continueBtnText').innerText = t.continueBtn;
     document.getElementById('footerText').innerText = t.footer;
     document.getElementById('fullName').placeholder = t.placeholderName;
@@ -78,7 +75,7 @@ function applyLanguage() {
     document.getElementById('phone').placeholder = t.placeholderPhone;
     document.getElementById('organization').placeholder = t.placeholderOrg;
     document.getElementById('position').placeholder = t.placeholderPosition;
-    // Top bar
+    
     document.getElementById('t1').innerText = t.t1;
     document.getElementById('t2').innerText = t.t2;
     document.getElementById('t3').innerText = t.t3;
@@ -86,21 +83,80 @@ function applyLanguage() {
     document.getElementById('t5').innerText = t.t5;
     document.getElementById('t6').innerText = t.t6;
     document.getElementById('t7').innerText = t.t7;
-    // Logo
+    
+    window.errorMessages = {
+        name: t.errorName,
+        email: t.errorEmail,
+        phone: t.errorPhone,
+        connection: t.errorConnection,
+        server: t.errorServer
+    };
+    
     const logo = document.getElementById('expoLogo');
     if (currentLang === 'ar') logo.src = 'expo2026_ar_white.png';
     else logo.src = 'expo2026_en_white.png';
-    // Direction
+    
     const html = document.documentElement;
     html.lang = currentLang;
     html.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
 }
 
 window.toggleLang = function() {
-    currentLang = currentLang === 'en' ? 'ar' : 'en';
+    currentLang = currentLang === 'ar' ? 'ar' : 'en';
     localStorage.setItem('visitorLang', currentLang);
     applyLanguage();
 };
+
+// ==================== VALIDATION FUNCTIONS ====================
+function hideAllErrors() {
+    const errors = ['errorName', 'errorEmail', 'errorPhone', 'generalError'];
+    errors.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+    });
+}
+
+function showFieldError(fieldId, message) {
+    const errorEl = document.getElementById(fieldId);
+    if (errorEl) {
+        errorEl.innerText = message;
+        errorEl.style.display = 'block';
+    }
+}
+
+function showGeneralError(message) {
+    const generalError = document.getElementById('generalError');
+    if (generalError) {
+        generalError.innerText = message;
+        generalError.style.display = 'block';
+    }
+}
+
+function validateForm() {
+    hideAllErrors();
+    let isValid = true;
+    
+    const name = document.getElementById('fullName').value.trim();
+    if (!name) {
+        showFieldError('errorName', window.errorMessages?.name || 'Please enter your full name');
+        isValid = false;
+    }
+    
+    const email = document.getElementById('email').value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email || !emailRegex.test(email)) {
+        showFieldError('errorEmail', window.errorMessages?.email || 'Please enter a valid email');
+        isValid = false;
+    }
+    
+    const phone = document.getElementById('phone').value.trim();
+    if (!phone) {
+        showFieldError('errorPhone', window.errorMessages?.phone || 'Please enter your phone number');
+        isValid = false;
+    }
+    
+    return isValid;
+}
 
 // ==================== REGISTRATION LOGIC ====================
 document.addEventListener('DOMContentLoaded', function() {
@@ -108,87 +164,71 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const submitBtn = document.getElementById('submitRegisterBtn');
     const regForm = document.getElementById('regForm');
-    const qrSection = document.getElementById('qrSection');
-    let visitorData = {};
-
-    function getAlertMessage(key) {
-        return translations[currentLang][key];
-    }
+    const successSection = document.getElementById('successSection');
+    
+    let isSubmitting = false;
 
     submitBtn.addEventListener('click', function() {
+        if (isSubmitting) return;
+        
+        if (!validateForm()) return;
+        
+        isSubmitting = true;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+        
         const name = document.getElementById('fullName').value.trim();
         const email = document.getElementById('email').value.trim();
         const phone = document.getElementById('phone').value.trim();
         const org = document.getElementById('organization').value.trim();
         const position = document.getElementById('position').value.trim();
-
-        if (!name) { alert(getAlertMessage('nameRequired')); return; }
-        if (!email || !/^\S+@\S+\.\S+$/.test(email)) { alert(getAlertMessage('emailInvalid')); return; }
-        if (!phone) { alert(getAlertMessage('phoneRequired')); return; }
-
+        
         const visitorId = 'VIS' + Date.now() + Math.random().toString(36).substr(2, 8);
-        const qrContent = JSON.stringify({
-            id: visitorId,
-            name: name,
-            email: email,
-            event: "EXPO 2026",
-            date: new Date().toLocaleDateString()
-        });
-
-        visitorData = {
+        
+        const visitorData = {
             visitor_id: visitorId,
             full_name: name,
             email: email,
             phone: phone,
             organization: org,
             position: position,
-            attendance: 'yes',
-            qr_code: qrContent,
-            registered_at: new Date().toISOString()
+            attendance: 'yes'
         };
-
+        
         localStorage.setItem('expo_visitor', JSON.stringify(visitorData));
         sessionStorage.setItem('guestMode', 'true');
         sessionStorage.setItem('guestAttendance', 'yes');
-alert(JSON.stringify(visitorData));
-        // Send to PHP
-        fetch('visitor.php', {
+        
+        fetch('save_visitor.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(visitorData)
         })
         .then(res => res.json())
         .then(data => {
-            if (!data.success) console.warn('DB save failed:', data.message);
+            if (data.success) {
+                regForm.style.display = 'none';
+                successSection.style.display = 'block';
+            } else {
+                showGeneralError(data.message || (window.errorMessages?.server || 'Server error'));
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span id="registerBtnText">' + (translations[currentLang]?.registerBtn || 'Register') + '</span>';
+            }
+            isSubmitting = false;
         })
-        .catch(err => console.error('Fetch error:', err));
-
-        regForm.style.display = 'none';
-        qrSection.style.display = 'block';
-
-        new QRCode(document.getElementById('qrcode'), {
-            text: qrContent,
-            width: 200,
-            height: 200,
-            colorDark: "#632949",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.H
+        .catch(err => {
+            console.error('Fetch error:', err);
+            showGeneralError(window.errorMessages?.connection || 'Connection error. Please try again.');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<span id="registerBtnText">' + (translations[currentLang]?.registerBtn || 'Register') + '</span>';
+            isSubmitting = false;
         });
     });
-
-    document.getElementById('downloadQrBtn').addEventListener('click', function() {
-        const canvas = document.querySelector('#qrcode canvas');
-        if (canvas) {
-            const link = document.createElement('a');
-            link.download = `EXPO_${visitorData.full_name?.replace(/\s/g, '_') || 'visitor'}_pass.png`;
-            link.href = canvas.toDataURL();
-            link.click();
-        } else {
-            alert('QR code not ready');
-        }
-    });
-
-    document.getElementById('continueToSiteBtn').addEventListener('click', function() {
-        window.location.href = 'home.html';
-    });
+    
+    const continueBtn = document.getElementById('continueToSiteBtn');
+    if (continueBtn) {
+        continueBtn.addEventListener('click', function(e) {
+            window.location.href = 'Home.html';
+        });
+    }
 });

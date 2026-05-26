@@ -2,7 +2,7 @@
 session_start();
 header("Content-Type: application/json");
 
-$conn = new mysqli("localhost", "root", "", "expo2026");
+$conn = new mysqli("localhost", "root", "", "expo2026_new");
 
 if ($conn->connect_error) {
     echo json_encode(["status" => "error", "message" => "DB error"]);

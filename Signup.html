@@ -1,6 +1,13 @@
 <!doctype html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="ar" dir="rtl">
+  <head><script>
+(function(){
+  if(!localStorage.getItem('lang')) localStorage.setItem('lang','ar');
+  var l=localStorage.getItem('lang')||'ar';
+  document.documentElement.lang=l;
+  document.documentElement.dir=l==='ar'?'rtl':'ltr';
+})();
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-en="EXPO 2026 | Sign Up" data-ar="اكسبو 2026 | التسجيل">

@@ -3,7 +3,7 @@ document.addEventListener("click", outsideClick);
 const menu = document.getElementById("menu");
 
 /* اللغة الافتراضية */
-let lang = localStorage.getItem("lang") || "en";
+let lang = localStorage.getItem("lang") || "ar";
 
 /* تطبيق اللغة عند فتح الصفحة */
 applyLanguage();

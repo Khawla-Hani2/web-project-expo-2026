@@ -6,7 +6,7 @@ $conn = new mysqli(
     "localhost",
     "root",
     "",
-    "expo2026"
+    "expo2026_new"
 );
 
 if($conn->connect_error){

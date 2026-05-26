@@ -1,5 +1,5 @@
 <?php
-$lang = ($_GET['lang'] ?? 'en') === 'ar' ? 'ar' : 'en';
+$lang = ($_GET['lang'] ?? 'ar') === 'ar' ? 'ar' : 'en';
 $isArabic = $lang === 'ar';
 
 $conn = new mysqli('localhost', 'root', '', 'expo2026');

@@ -1,5 +1,5 @@
 const menu = document.getElementById("menu");
-let lang = "en";
+let lang = localStorage.getItem("lang") || "ar";
 
 function toggleMenu(e){
   e.stopPropagation();

@@ -16,7 +16,7 @@ if (!isset($_SERVER['_EXPO_MAIN_JS_LOADED'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +48,7 @@ if (!isset($_SERVER['_EXPO_MAIN_JS_LOADED'])) {
   <a href="category.php?cat=research" class="seg s7"><img src="Research_Publications.png" alt=""><span id="t7">Research</span></a>
 
   <div class="logoR">
-    <img src="expo2026_en_white.png" id="expoLogo" alt="EXPO 2026">
+    <img src="expo2026_ar_white.png" id="expoLogo" alt="EXPO 2026">
   </div>
 </div>
 

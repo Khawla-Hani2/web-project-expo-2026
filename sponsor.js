@@ -1,4 +1,4 @@
-let currentLang = "en";
+let currentLang = localStorage.getItem("lang") || "ar";
 
 const sponsors = [
   {

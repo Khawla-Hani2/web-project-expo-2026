@@ -48,7 +48,7 @@ require_once 'header.php';
     <div class="card"><div class="card-body"><h3 data-en="Poster" data-ar="البوستر">البوستر</h3></div></div>
   </a>
   <a href="Studentdata.php" class="card-link">
-    <div class="card"><div class="card-body"><h3 data-en="Student Data" data-ar="بيانات الطلاب">بيانات الطلاب</h3></div></div>
+    <div class="card"><div class="card-body"><h3 data-en="Project Data" data-ar="بيانات المشروع">بيانات الطلاب</h3></div></div>
   </a>
   <?php } ?>
 
@@ -77,11 +77,10 @@ require_once 'header.php';
 <div class="footer-img">
   <img src="footer.png" alt="Footer">
   <div class="footer-text" id="footerText">
-    Vice Deanship of Scientific Research and Innovation
+    وكالة الكلية للبحث العلمي والابتكار
   </div>
 </div>
 
-<?php require_once 'footer.php'; ?>
 
 <script>
 (function() {

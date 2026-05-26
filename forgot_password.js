@@ -1,6 +1,6 @@
 // Hawraa Waleed Al ibrahim
 let verifiedEmail = "";
-let lang = "en";
+let lang = "ar";
 
 // STEP 1: Email verification
 function checkEmail() {

@@ -114,7 +114,7 @@ function getPreferredExpoLanguage() {
   const savedLang = localStorage.getItem("lang") || localStorage.getItem("language") || localStorage.getItem("siteLang");
   const globalLang = typeof window.lang !== "undefined" ? window.lang : "";
   const htmlLang = document.documentElement.getAttribute("lang") || "";
-  const selected = urlLang || savedLang || globalLang || htmlLang || "en";
+  const selected = urlLang || savedLang || globalLang || htmlLang || "ar";
   return selected === "ar" ? "ar" : "en";
 }
 

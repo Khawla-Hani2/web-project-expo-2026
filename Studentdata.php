@@ -98,7 +98,7 @@ $pageTitle = "Expo 2026 | Student Data";
     }
     .member-tag {
       display: inline-block;
-      background: #632949;
+      background: #303b5a;
       color: #fff;
       padding: 4px 12px;
       border-radius: 16px;
@@ -135,13 +135,13 @@ $pageTitle = "Expo 2026 | Student Data";
     }
     input:focus, textarea:focus, select:focus {
       outline: none;
-      border-color: #632949;
+      border-color: #303b5a;
       box-shadow: 0 0 0 3px rgba(99, 41, 73, 0.1);
     }
     button[type="submit"] {
       margin-top: 20px;
       padding: 14px 24px;
-      background: #632949;
+      background: #303b5a;
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -151,7 +151,7 @@ $pageTitle = "Expo 2026 | Student Data";
       width: 100%;
     }
     button[type="submit"]:hover {
-      background: #4a1e35;
+      background: #303b5a;
     }
     .member-row-grid {
       display: grid;
@@ -180,7 +180,7 @@ $pageTitle = "Expo 2026 | Student Data";
         <p data-en="You are already registered as a member on the project:" data-ar="أنت مسجل بالفعل كعضو في المشروع:">
           You are already registered as a member on the project:
         </p>
-        <strong style="font-size: 18px; color: #632949;"><?php echo htmlspecialchars($member_project['project_title']); ?></strong>
+        <strong style="font-size: 18px; color: #303b5a"><?php echo htmlspecialchars($member_project['project_title']); ?></strong>
         <p style="margin-top: 10px; font-size: 13px;" data-en="Team members cannot create separate projects." data-ar="لا يمكن للأعضاء إنشاء مشاريع منفصلة.">
           Team members cannot create separate projects.
         </p>
@@ -227,7 +227,7 @@ $pageTitle = "Expo 2026 | Student Data";
         <label data-en="Supervisor Name" data-ar="اسم المشرف">Supervisor Name</label>
         <input type="text" name="supervisor" placeholder="Supervisor Name" data-en-placeholder="Supervisor Name" data-ar-placeholder="اسم المشرف">
 
-        <label data-en="Phone Number" data-ar="رقم الجوال">Phone Number</label>
+        <label data-en="Phone Number" data-ar=" رقم الجوال قائد المشروع">Phone Number</label>
         <input type="tel" name="phone" placeholder="05XXXXXXXX" pattern="^05\d{8}$" required data-en-placeholder="05XXXXXXXX" data-ar-placeholder="05XXXXXXXX">
 
         <label data-en="Project Theme" data-ar="موضوع المشروع">Project Theme</label>

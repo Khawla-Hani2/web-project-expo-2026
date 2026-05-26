@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ];
 
             // Recipients
-            $mail->setFrom('khawlahani18@gmail.com', 'EXPO IAU 2026');
+            $mail->setFrom('khawlahani18@gmail.com', 'EXPO 2026');
             $mail->addAddress($email, $firstName . ' ' . $lastName);
 
             // Content
